@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: String = 'Hola Mundo';
-  public counter: Number = 0;
 }
