@@ -16,13 +16,15 @@ export class DbzAddCharacterComponent {
   };
 
   emitCharacter(): void {
-    console.log(this.character);
+    // console.log(this.character);
 
     if (this.character.name.trim().length === 0) return;
 
     this.onNewCharacter.emit(this.character);
 
-    this.character.name = '';
-    this.character.power = 0;
+    this.character = {
+      name: '',
+      power: 0,
+    };
   }
 }
