@@ -1,1 +1,19 @@
-<p>byRegionPage works!</p>
+<h2>Por Región</h2>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <!-- SearchBox -->
+    <shared-search-box
+      (onInputChange)="searchByRegion($event.toString())"
+      placeholder="Buscar por región"
+
+    ></shared-search-box>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
