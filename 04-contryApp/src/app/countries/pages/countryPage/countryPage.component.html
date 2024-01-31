@@ -36,7 +36,7 @@
     
       <div class="d-flex flex-wrap">
         <span *ngFor="let trans of translations" class="badge bg-primary m-1">
-         
+         {{country.translations[trans[0]].common}}
         </span>
       </div>
     </div>
