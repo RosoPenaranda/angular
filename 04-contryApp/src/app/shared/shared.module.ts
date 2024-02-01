@@ -6,6 +6,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { ContactPageComponent } from './pages/contact/contact-page.component';
 import { SearchBoxComponent } from './components/searchBox/searchBox.component';
+import { LoadingSpinnerComponent } from './components/loadingSpinner/loadingSpinner.component';
 
 const shareComponents = [
   HomePageComponent,
@@ -13,6 +14,7 @@ const shareComponents = [
   SidebarComponent,
   ContactPageComponent,
   SearchBoxComponent,
+  LoadingSpinnerComponent,
 ];
 
 @NgModule({
