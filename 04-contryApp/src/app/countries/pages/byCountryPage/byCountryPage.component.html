@@ -6,7 +6,8 @@
 
     <!-- SearchBox -->
     <shared-search-box
-      (onInputChange)="searchByCountry($event.toString())"
+      (onDebounce)="searchByCountry($event.toString())"
+      [initialValue]="initialValue"
       placeholder="Buscar por país"
 
     ></shared-search-box>
