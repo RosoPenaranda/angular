@@ -1,5 +1,5 @@
 import { Pipe, type PipeTransform } from '@angular/core';
-import { Hero } from '../interfaces/hero.interface';
+import { Hero, ColorMap } from '../interfaces/hero.interface';
 
 @Pipe({
   name: 'sortBy',
@@ -14,7 +14,7 @@ export class SortByPipe implements PipeTransform {
           a.canFly === b.canFly ? 0 : a.canFly ? -1 : 1
         );
       case 'color':
-        return heroes.sort((a, b) => a.color - b.color);
+        return heroes.sort((a, b) => ColorMap[a.color] - ColorMap[b.color]);
       default:
         return heroes;
     }
