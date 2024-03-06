@@ -10,7 +10,7 @@ import { Hero } from '../../interfaces/hero.interface';
   styles: ``,
 })
 export class HeroPageComponent implements OnInit {
-  public hero!: Hero;
+  public hero?: Hero;
 
   constructor(
     private heroesService: HeroesService,
@@ -27,5 +27,9 @@ export class HeroPageComponent implements OnInit {
         this.hero = hero;
         return;
       });
+  }
+
+  goBack(): void {
+    this.router.navigateByUrl('heroes/list');
   }
 }
